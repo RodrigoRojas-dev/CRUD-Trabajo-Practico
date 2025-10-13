@@ -37,5 +37,8 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "allowImportingTsExtensions": true, // Permite usar .ts en las importaciones
+    "noEmit": true, // Evita que tsc genere archivos JS (solo verificará)
+    "resolveJsonModule": true
   }
 }
