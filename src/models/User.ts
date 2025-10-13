@@ -8,8 +8,11 @@ const userSchema = new Schema<IUser>({
 
 const User = model<IUser>("User", userSchema)
 
-interface IUser {
+interface IUser extends Document {
   name: string,
   email: string,
   password: string
 }
+
+export { User };
+export type { IUser };

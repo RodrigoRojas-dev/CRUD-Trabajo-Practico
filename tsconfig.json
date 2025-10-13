@@ -9,7 +9,9 @@
     "module": "nodenext",
     "target": "es2022",
     "moduleResolution": "nodenext",
-    "types": [],
+    "types": [
+      "node"
+    ],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
