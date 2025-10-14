@@ -1,0 +1,22 @@
+meta {
+  name: 04 - Update User
+  type: http
+  seq: 6
+}
+
+patch {
+  url: http://localhost:3000/users/68ee2db231ce664ba37d7906
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Juan Pérez Modificado",
+    "email": "nuevo.email@ejemplo.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
