@@ -1,4 +1,4 @@
-import { request, type Request, type Response } from "express";
+import { type Request, type Response } from "express";
 import { createUserDB, deleteUserDB, getAllUsersDB, getUserByIdDB, updateUserDB } from "../services/UserService.ts";
 
 const getAllUsers = async (req: Request, res: Response) => {
