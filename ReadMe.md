@@ -34,7 +34,7 @@ Este proyecto es una API RESTful simple para la gestión de recursos de usuarios
 
 4.  **Iniciar el Servidor:**
     ```bash
-    npx ts-node src/index.ts
+    npm run dev
     ```
     El servidor escuchará en `http://localhost:3000`.
 
