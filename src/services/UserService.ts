@@ -1,16 +1,16 @@
 import { User, type IUser } from "../models/User.ts";
 
-const getAllUsers = async (): Promise<IUser[]> => {
+const getAllUsersDB = async (): Promise<IUser[]> => {
   const users = await User.find()
   return users;
 }
 
-const getUserById = async (id: string): Promise<IUser | null> => {
+const getUserByIdDB = async (id: string): Promise<IUser | null> => {
   const user = await User.findById(id)
   return user
 }
 
-const createUser = async (userData: Omit<IUser, "_id">): Promise<IUser | null> => {
+const createUserDB = async (userData: Omit<IUser, "_id">): Promise<IUser | null> => {
   try {
     const newUser = await User.create(userData)
     console.log("Usuario creado con exito ✅");
@@ -21,7 +21,7 @@ const createUser = async (userData: Omit<IUser, "_id">): Promise<IUser | null> =
   }
 }
 
-const updateUser = async (id: string, updateData: Partial<IUser>): Promise<IUser | null> => {
+const updateUserDB = async (id: string, updateData: Partial<IUser>): Promise<IUser | null> => {
   try {
     const updatedUser = await User.findByIdAndUpdate(
       id,
@@ -36,7 +36,7 @@ const updateUser = async (id: string, updateData: Partial<IUser>): Promise<IUser
   }
 }
 
-const deleteUser = async (id: string): Promise<IUser | null> => {
+const deleteUserDB = async (id: string): Promise<IUser | null> => {
   try {
     const deletedUser = await User.findByIdAndDelete(id)
     console.log(`El usuario ${deletedUser?.name} se borro exitosamente ✅`);
@@ -47,4 +47,4 @@ const deleteUser = async (id: string): Promise<IUser | null> => {
   }
 }
 
-export { getAllUsers, getUserById, createUser, updateUser, deleteUser }
+export { getAllUsersDB, getUserByIdDB, createUserDB, updateUserDB, deleteUserDB }
